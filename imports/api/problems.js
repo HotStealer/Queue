@@ -22,7 +22,6 @@ Meteor.methods({
     },
     'problems.remove'(problemId) {
         check(problemId, String);
-        debugger;
         const problems = Problems.findOne(problemId);
         if (problems.owner !== this.userId) {
             throw new Meteor.Error('not-authorized')

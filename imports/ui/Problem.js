@@ -6,7 +6,6 @@ import {Problems} from '../api/problems.js';
 export default class Problem extends Component {
 
     deleteThisProblem() {
-        debugger;
         Meteor.call('problems.remove', this.props.problem._id);
     }
 
